@@ -6,7 +6,8 @@ def rain_judge():
     forecasts = res_json['forecasts'][0]
     info = forecasts['dateLabel'] + ':' + forecasts['detail']['weather']
     weather = info.find('雨')
+    
     if weather >= 0:
-        return '傘を持っていきましょう!'
-
-print(rain_judge())
+        return info , '傘を持っていきましょう！'
+    else:
+        return info , '今日は雨は降らなさそうです！'
