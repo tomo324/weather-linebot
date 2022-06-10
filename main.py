@@ -15,7 +15,7 @@ umbrella = weather_search.rain_judge()
 
 def main():
     USER_ID = info['USER_ID']
-    messages = TextSendMessage(text = umbrella[0]+ '\n' + '--------' + '\n' +  umbrella[1])
+    messages = TextSendMessage(text = umbrella[0]+ '\n' + '----------------------' + '\n' +  umbrella[1])
     line_bot_api.push_message(USER_ID,messages=messages)
 
 if __name__ == "__main__":
