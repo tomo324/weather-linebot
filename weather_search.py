@@ -8,6 +8,10 @@ def rain_judge():
     weather = info.find('雨')
     
     if weather >= 0:
-        return '傘を持っていきましょう！'
+        return info , '傘を持っていきましょう！'
     else:
+<<<<<<< HEAD
         return '傘は不要です！'
+=======
+        return info , '今日は雨は降らなさそうです！'
+>>>>>>> 75c5cf610d8626a7797871f2f246d7cd72a0c8d1
