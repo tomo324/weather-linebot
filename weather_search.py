@@ -1,7 +1,7 @@
 def rain_judge():
     from operator import truediv
     import requests
-    res = requests.get('https://weather.tsukumijima.net/api/forecast?city=130010')
+    res = requests.get('https://weather.tsukumijima.net/api/forecast?city=110010')
     res_json = res.json()
     forecasts = res_json['forecasts'][0]
     info = forecasts['dateLabel'] + ':' + forecasts['detail']['weather']
@@ -10,4 +10,4 @@ def rain_judge():
     if weather >= 0:
         return '傘を持っていきましょう！'
     else:
-        return '今日は雨は降らなさそうです！'
+        return '傘は不要です！'
