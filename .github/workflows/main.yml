@@ -3,8 +3,9 @@ name: test_chatbot
 
 
 on:
-  schedule:
-    - cron: '0 21 * * *'
+  push:
+#  schedule:
+#    - cron: '0 21 * * *'
 
 jobs:
   build:
@@ -26,9 +27,10 @@ jobs:
           # 必要なパッケージインストール
           pip install line-bot-sdk
       - name: Run script
-        run: |
-          # main.pyの実行
-          python main.py
         env:
           CHANNEL_ACCESS_TOKEN: ${{ secrets.CHANNEL_ACCESS_TOKEN }}
           USER_ID: ${{ secrets.USER_ID }}
+        run: |
+          # main.pyの実行
+          python main.py
+
