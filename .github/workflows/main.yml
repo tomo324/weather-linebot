@@ -1,7 +1,6 @@
 # ワークフロー名
 name: test_chatbot
 
-
 on:
   push:
 #  schedule:
