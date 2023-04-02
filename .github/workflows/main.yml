@@ -33,4 +33,3 @@ jobs:
         run: |
           # main.pyの実行
           python main.py
-
